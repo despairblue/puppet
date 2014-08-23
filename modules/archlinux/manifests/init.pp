@@ -61,8 +61,13 @@ class archlinux (
     ensure     => present,
     home       => '/home/papply',
     managehome => true,
-    require    => Package[$git_package],
+    require    => [Package[$git_package], Service['cronie']],
   }
+  service { 'cronie':
+    ensure => running,
+    enable => true,
+  }
+
   package { $zsh_package:
     ensure => installed,
   }
