@@ -35,16 +35,51 @@
 #
 # Copyright 2014 Your name here, unless otherwise noted.
 #
-class archlinux {
+class archlinux (
+  $user = 'despairblue',
+  $trash_cli_package  = 'trash-cli',
+  $git_package        = 'git',
+  $supervisor_package = 'supervisor',
+  $zsh_package        = 'zsh',
+  $puppet_service     = 'puppet'
+) {
+  user { $user:
+    ensure     => present,
+    home       => "/home/${user}",
+    managehome => true,
+    shell      => '/bin/zsh',
+    require    => Package[$zsh_package],
+  }
+  user { 'papply':
+    ensure     => present,
+    home       => '/home/papply',
+    managehome => true,
+    require    => Package[$git_package],
+  }
+  package { $zsh_package:
+    ensure => installed,
+  }
+  package { $trash_cli_package:
+    ensure => installed,
+  }
+  package { $git_package:
+    ensure => installed,
+  }
+  package { $supervisor_package:
+    ensure => installed,
+  }
+  package { 'puppet':
+    ensure => installed,
+  }
+  package { 'htop':
+    ensure => installed,
+  }
+  package { 'atom-editor':
+    ensure => installed,
+  }
+
   file { '/etc/environment':
     ensure  => file,
-#     content => '#
-# # This file is parsed by pam_env module
-# #
-# # Syntax: simple "KEY=VAL" pairs on separate lines
-# #
-# LANG=en_US.UTF-8
-# ',
     source  => 'puppet:///modules/archlinux/etc/environment',
     group   => 'root',
     mode    => '0644',
