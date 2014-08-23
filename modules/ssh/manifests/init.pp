@@ -42,9 +42,10 @@ class ssh {
   }
 
   file { '/etc/ssh/sshd_config':
-  source  => 'puppet:///modules/ssh/etc/ssh/sshd_config',
-  group   => 'root',
-  mode    => '0644',
-  owner   => 'root',
-}
+    source  => 'puppet:///modules/ssh/etc/ssh/sshd_config',
+    notify  => Service['sshd'],
+    group   => 'root',
+    mode    => '0644',
+    owner   => 'root',
+  }
 }
