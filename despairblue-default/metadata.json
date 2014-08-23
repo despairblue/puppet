@@ -1,0 +1,16 @@
+{
+  "name": "despairblue-normal",
+  "version": "0.1.0",
+  "author": "despairblue",
+  "summary": "Default configuration",
+  "license": "Apache 2.0",
+  "source": "",
+  "project_page": null,
+  "issues_url": null,
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_range": ">= 1.0.0"
+    }
+  ]
+}
