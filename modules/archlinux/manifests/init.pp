@@ -67,6 +67,7 @@ class archlinux (
     ensure => running,
     enable => true,
   }
+  include sudo
 
   package { $zsh_package:
     ensure => installed,
