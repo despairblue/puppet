@@ -66,7 +66,9 @@ class archlinux (
       $supervisor_package,
       'puppet',
       'htop',
-      'atom-editor'
+      'atom-editor',
+      'puppet-lint',
+      'google-chrome',
     ]:
     ensure => installed,
   }
