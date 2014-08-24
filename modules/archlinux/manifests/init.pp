@@ -52,10 +52,16 @@ class archlinux (
     shell      => '/bin/zsh',
     require    => Package[$zsh_package],
   }
-  ssh_authorized_key { 'despairblue_key':
+  ssh_authorized_key { 'despairblue@serenity':
     user => 'despairblue',
     type => 'rsa',
     key  => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDCJKQo9Ce7aZtg10JvPKwcjmC3/UNKPpBW7BGUrCDAfkHWU9k8gH6uuAH+7H7BoBKGhrfs++JIvlOc7RKsHOfe5WAbd1gmIVKXsl2kg1Q1odUeU509hTfbx3/dPgZDSo0ebuJMDuuZvQ+W0w8RazkbYy8FXUXwW4MrimTTLyAW6jMZJJnceExZFecGIsnTV6355dMUsTSKxtKO30VdbQWL4VrwU5El6hzPy6LMR0t3N0hKYyYU4fZXFqpzjWhiM/tSWU1JsogLQ3ZpKCJsvm187aT75lZVleOw6rw3Oyv5kNQdd8G8fs5NymL3qMwPOtAobH0rSlAOY8JrH4/aMheZ',
+  }
+
+  ssh_authorized_key { 'despairblue@firefly':
+    user => 'despairblue',
+    type => 'rsa',
+    key  => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDJhp2Yl0EbUfphhLTe09AlNJuTHNXbD22OMcMLg+9/5F5eIsX78t0S95lER8RC5O2djHSJKwXgu+rwfYU2BYSDyvSAcIrQ4zlX961BPNdOtWV/44ciq1rFCg2xGZs/0EVAz6mpRKrANI9RRqAZbyDzjZ9WYY8UQrjOHkKoHv0JnJUZy05AGsBHwClxPTQc0+Kr0NVTeScqJoolIKn1L0XeVT+AHlofqcI+luOTNoFZ87OjAhPwShz5uyjcJb4LYfKF25fAttnoBZBsW74EBOark7Zd5ZLAmeBva3iO2xzOMI6PBe+gDGM7fj90vF1zd3DsX+ekGY0n+aum/E+Wwewp',
   }
 
   package {
