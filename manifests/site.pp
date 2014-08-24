@@ -14,7 +14,13 @@ node 'baselinux' {
 }
 
 node 'serenity' inherits 'baselinux'{
+  class { 'tinc':
+    nodenumber => 1,
+  }
 }
 
 node 'firefly' inherits 'baselinux'{
+  class { 'tinc':
+    nodenumber => 2,
+  }
 }

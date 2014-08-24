@@ -75,7 +75,6 @@ class archlinux (
       'nodejs',
       'puppet-lint',
       'puppet',
-      'tinc',
       $git_package,
       $supervisor_package,
       $trash_cli_package,
