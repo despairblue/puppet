@@ -7,8 +7,14 @@ file { '/tmp/puppet.lastrun':
   backup  => false,
 }
 
-node 'serenity' {
+node 'baselinux' {
   include archlinux
   include ssh
   include autoupdate
+}
+
+node 'serenity' inherits 'baselinux'{
+}
+
+node 'firefly' inherits 'baselinux'{
 }
