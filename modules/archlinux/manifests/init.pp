@@ -58,96 +58,66 @@ class archlinux (
     key  => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDCJKQo9Ce7aZtg10JvPKwcjmC3/UNKPpBW7BGUrCDAfkHWU9k8gH6uuAH+7H7BoBKGhrfs++JIvlOc7RKsHOfe5WAbd1gmIVKXsl2kg1Q1odUeU509hTfbx3/dPgZDSo0ebuJMDuuZvQ+W0w8RazkbYy8FXUXwW4MrimTTLyAW6jMZJJnceExZFecGIsnTV6355dMUsTSKxtKO30VdbQWL4VrwU5El6hzPy6LMR0t3N0hKYyYU4fZXFqpzjWhiM/tSWU1JsogLQ3ZpKCJsvm187aT75lZVleOw6rw3Oyv5kNQdd8G8fs5NymL3qMwPOtAobH0rSlAOY8JrH4/aMheZ',
   }
 
-  package { $zsh_package:
-    ensure => installed,
-  }
-  package { $trash_cli_package:
-    ensure => installed,
-  }
-  package { $git_package:
-    ensure => installed,
-  }
-  package { $supervisor_package:
-    ensure => installed,
-  }
-  package { 'puppet':
-    ensure => installed,
-  }
-  package { 'htop':
-    ensure => installed,
-  }
-  package { 'atom-editor':
+  package {
+    [
+      $zsh_package,
+      $trash_cli_package,
+      $git_package,
+      $supervisor_package,
+      'puppet',
+      'htop',
+      'atom-editor'
+    ]:
     ensure => installed,
   }
 
-  file { '/etc/environment':
-    ensure  => file,
-    source  => 'puppet:///modules/archlinux/etc/environment',
-    group   => 'root',
-    mode    => '0644',
-    owner   => 'root',
+  rootfile {
+    [
+      '/etc/environment',
+      '/etc/makepkg.conf',
+      '/etc/mkinitcpio.conf',
+      '/etc/pacman.conf',
+      '/etc/systemd/logind.conf',
+    ]:
   }
 
-  file { '/etc/makepkg.conf':
-    ensure => file,
-    source => 'puppet:///modules/archlinux/etc/makepkg.conf',
-    mode   => '0644',
-    group  => root,
-    owner  => root,
+  rootfile { '/etc/NetworkManager/dispatcher.d/10-ntpd':
+    mode => '0600',
   }
 
-  file { '/etc/mkinitcpio.conf':
-    ensure => file,
-    source => 'puppet:///modules/archlinux/etc/mkinitcpio.conf',
-    mode   => '0644',
-    group  => root,
-    owner  => root,
-  }
-
-  file { '/etc/pacman.conf':
-    ensure => file,
-    source => 'puppet:///modules/archlinux/etc/pacman.conf',
-    mode   => '0644',
-    group  => root,
-    owner  => root,
-  }
-
-  file { '/etc/modprobe.d':
-    ensure  => directory,
-    source  => 'puppet:///modules/archlinux/etc/modprobe.d',
-    mode    => '0644',
-    group   => root,
-    owner   => root,
-    recurse => true,
-  }
-
-  file { '/etc/NetworkManager/dispatcher.d/10-ntpd':
-    ensure  => directory,
-    source  => 'puppet:///modules/archlinux/etc/NetworkManager/dispatcher.d/10-ntpd',
-    mode    => '0600',
-    group   => root,
-    owner   => root,
-  }
-
-  file { '/etc/pam.d':
-    ensure  => directory,
-    source  => 'puppet:///modules/archlinux/etc/pam.d',
-    mode    => '0644',
-    group   => root,
-    owner   => root,
-    recurse => true,
-  }
-
-
-  file { '/etc/systemd/logind.conf':
-    ensure  => directory,
-    source  => 'puppet:///modules/archlinux/etc/systemd/logind.conf',
-    mode    => '0644',
-    group   => root,
-    owner   => root,
+  rootdirectory {
+    [
+      '/etc/modprobe.d',
+      '/etc/pam.d',
+    ]:
   }
 
   file { '/etc/motd':
     content => template('archlinux/motd.erb'),
+  }
+}
+
+# == Define: rootfile
+#
+define rootfile ($path = $title, $mode = '0644') {
+  file { $path:
+    ensure => file,
+    source => "puppet:///modules/archlinux/${path}",
+    mode   => $mode,
+    owner  => root,
+    group  => root,
+  }
+}
+
+# == Define: rootdirectory
+#
+define rootdirectory ($path = $title, $mode = '0644') {
+  file { $path:
+    ensure  => directory,
+    source  => "puppet:///modules/archlinux/${path}",
+    mode    => $mode,
+    group   => root,
+    owner   => root,
+    recurse => true,
   }
 }
