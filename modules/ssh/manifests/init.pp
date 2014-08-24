@@ -41,8 +41,9 @@ class ssh {
   }
 
   service { 'sshd':
-    ensure => running,
-    enable => true,
+    ensure  => running,
+    enable  => true,
+    require => Package['openssh'],
   }
 
   file { '/etc/ssh/sshd_config':
