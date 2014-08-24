@@ -75,6 +75,11 @@ class archlinux (
       'atom-editor',
       'puppet-lint',
       'google-chrome',
+      'nodejs',
+      'byobu',
+      'gitg',
+      'hipchat',
+      'tinc',
     ]:
     ensure => installed,
   }
