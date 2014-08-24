@@ -87,4 +87,64 @@ class archlinux (
     mode    => '0644',
     owner   => 'root',
   }
+
+  file { '/etc/makepkg.conf':
+    ensure => file,
+    source => 'puppet:///modules/archlinux/etc/makepkg.conf',
+    mode   => '0644',
+    group  => root,
+    owner  => root,
+  }
+
+  file { '/etc/mkinitcpio.conf':
+    ensure => file,
+    source => 'puppet:///modules/archlinux/etc/mkinitcpio.conf',
+    mode   => '0644',
+    group  => root,
+    owner  => root,
+  }
+
+  file { '/etc/pacman.conf':
+    ensure => file,
+    source => 'puppet:///modules/archlinux/etc/pacman.conf',
+    mode   => '0644',
+    group  => root,
+    owner  => root,
+  }
+
+  file { '/etc/modprobe.d':
+    ensure  => directory,
+    source  => 'puppet:///modules/archlinux/etc/modprobe.d',
+    mode    => '0644',
+    group   => root,
+    owner   => root,
+    recurse => true,
+  }
+
+  file { '/etc/NetworkManager/dispatcher.d/10-ntpd':
+    ensure  => directory,
+    source  => 'puppet:///modules/archlinux/etc/NetworkManager/dispatcher.d/10-ntpd',
+    mode    => '0600',
+    group   => root,
+    owner   => root,
+  }
+
+  file { '/etc/pam.d':
+    ensure  => directory,
+    source  => 'puppet:///modules/archlinux/etc/pam.d',
+    mode    => '0644',
+    group   => root,
+    owner   => root,
+    recurse => true,
+  }
+
+
+  file { '/etc/systemd/logind.conf':
+    ensure  => directory,
+    source  => 'puppet:///modules/archlinux/etc/systemd/logind.conf',
+    mode    => '0644',
+    group   => root,
+    owner   => root,
+  }
+
 }
