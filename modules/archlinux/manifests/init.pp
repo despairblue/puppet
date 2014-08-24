@@ -66,20 +66,20 @@ class archlinux (
 
   package {
     [
-      $zsh_package,
-      $trash_cli_package,
-      $git_package,
-      $supervisor_package,
-      'puppet',
-      'htop',
       'atom-editor',
-      'puppet-lint',
-      'google-chrome',
-      'nodejs',
       'byobu',
       'gitg',
+      'google-chrome',
       'hipchat',
+      'htop',
+      'nodejs',
+      'puppet-lint',
+      'puppet',
       'tinc',
+      $git_package,
+      $supervisor_package,
+      $trash_cli_package,
+      $zsh_package,
     ]:
     ensure => installed,
   }
