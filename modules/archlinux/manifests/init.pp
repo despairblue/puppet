@@ -74,7 +74,6 @@ class archlinux (
   rootfile {
     [
       '/etc/environment',
-      '/etc/makepkg.conf',
       '/etc/mkinitcpio.conf',
       '/etc/pacman.conf',
       '/etc/systemd/logind.conf',
@@ -92,8 +91,11 @@ class archlinux (
     ]:
   }
 
-  file { '/etc/motd':
-    content => template('archlinux/motd.erb'),
+  roottemplate {
+    [
+      '/etc/motd',
+      '/etc/makepkg.conf',
+    ]:
   }
 }
 
@@ -119,5 +121,17 @@ define rootdirectory ($path = $title, $mode = '0644') {
     group   => root,
     owner   => root,
     recurse => true,
+  }
+}
+
+# == Define: roottemplate
+#
+define roottemplate ($path = $title, $mode = '0644') {
+  file { $path:
+    ensure  => file,
+    content => template("archlinux/${path}.erb"),
+    mode    => $mode,
+    group   => root,
+    owner   => root,
   }
 }
