@@ -147,4 +147,7 @@ class archlinux (
     owner   => root,
   }
 
+  file { '/etc/motd':
+    content => template('archlinux/motd.erb'),
+  }
 }
