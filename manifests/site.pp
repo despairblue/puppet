@@ -1,5 +1,7 @@
 File { backup => true }
 
 node 'serenity' {
-  include 'archlinux'
+  include archlinux
+  include ssh
+  include autoupdate
 }

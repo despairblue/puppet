@@ -39,12 +39,4 @@ class sudo {
   package { 'sudo':
     ensure => installed,
   }
-
-  file { '/etc/sudoers.d/papply':
-    ensure  => 'file',
-    source  => 'puppet:///modules/sudo/etc/sudoers.d/papply',
-    group   => 'root',
-    mode    => '0644',
-    owner   => 'root',
-  }
 }

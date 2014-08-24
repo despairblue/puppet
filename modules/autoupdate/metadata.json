@@ -1,0 +1,17 @@
+{
+  "name": "despairblue-autoupdate",
+  "version": "0.1.0",
+  "author": "despairblue",
+  "summary": null,
+  "license": "Enables autoupdate of the puppet config.",
+  "source": "",
+  "project_page": null,
+  "issues_url": null,
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_range": ">= 1.0.0"
+    }
+  ]
+}
+

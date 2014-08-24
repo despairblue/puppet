@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+PUPPETDIR=/home/papply/puppet
+puppet apply --modulepath=${PUPPETDIR}/modules ${PUPPETDIR}/manifests

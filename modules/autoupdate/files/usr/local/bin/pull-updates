@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+PUPPETDIR=/home/papply/puppet
+cd ${PUPPETDIR}
+git pull && sudo /usr/local/bin/papply
