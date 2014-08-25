@@ -83,9 +83,14 @@ class archlinux (
       $zsh_package,
   ])
 
+  ensure_packages([
+    'librarian-puppet'
+  ], { provider => gem })
+
   rootfile {
     [
       '/etc/environment',
+      '/etc/gemrc',
       '/etc/mkinitcpio.conf',
       '/etc/pacman.conf',
       '/etc/systemd/logind.conf',
