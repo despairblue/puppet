@@ -8,9 +8,16 @@ file { '/tmp/puppet.lastrun':
 }
 
 node 'baselinux' {
-  include archlinux
-  include ssh
-  include autoupdate
+  case $::osfamily {
+    'Archlinux': {
+      include archlinux
+      include ssh
+      include autoupdate
+    }
+    default: {
+      fail("${::osfamily} not supported.")
+    }
+  }
 }
 
 node 'serenity' inherits 'baselinux'{
