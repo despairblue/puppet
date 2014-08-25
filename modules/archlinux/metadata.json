@@ -11,7 +11,10 @@
     {
       "name": "puppetlabs-stdlib",
       "version_range": ">= 1.0.0"
+    },
+    {
+      "name": "puppetlabs-git",
+      "version_range": ">= 0.2.0"
     }
   ]
 }
-

@@ -38,12 +38,12 @@
 class archlinux (
   $user = 'despairblue',
   $trash_cli_package  = 'trash-cli',
-  $git_package        = 'git',
   $supervisor_package = 'supervisor',
   $zsh_package        = 'zsh',
   $puppet_service     = 'puppet'
 ) {
   include ssh
+  include git
 
   user { $user:
     ensure     => present,
@@ -52,6 +52,7 @@ class archlinux (
     shell      => '/bin/zsh',
     require    => Package[$zsh_package],
   }
+
   ssh_authorized_key { 'despairblue@serenity':
     user => 'despairblue',
     type => 'rsa',
@@ -62,6 +63,14 @@ class archlinux (
     user => 'despairblue',
     type => 'rsa',
     key  => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDJhp2Yl0EbUfphhLTe09AlNJuTHNXbD22OMcMLg+9/5F5eIsX78t0S95lER8RC5O2djHSJKwXgu+rwfYU2BYSDyvSAcIrQ4zlX961BPNdOtWV/44ciq1rFCg2xGZs/0EVAz6mpRKrANI9RRqAZbyDzjZ9WYY8UQrjOHkKoHv0JnJUZy05AGsBHwClxPTQc0+Kr0NVTeScqJoolIKn1L0XeVT+AHlofqcI+luOTNoFZ87OjAhPwShz5uyjcJb4LYfKF25fAttnoBZBsW74EBOark7Zd5ZLAmeBva3iO2xzOMI6PBe+gDGM7fj90vF1zd3DsX+ekGY0n+aum/E+Wwewp',
+  }
+
+  git::config { 'user.name':
+    value => 'Danny Arnold',
+  }
+
+  git::config { 'user.email':
+    value => 'danny@kietsy.com',
   }
 
   ensure_packages([
@@ -77,7 +86,6 @@ class archlinux (
       'puppet-lint',
       'puppet',
       'docker',
-      $git_package,
       $supervisor_package,
       $trash_cli_package,
       $zsh_package,
