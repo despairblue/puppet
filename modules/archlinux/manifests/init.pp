@@ -72,6 +72,7 @@ class archlinux (
       'google-chrome',
       'hipchat',
       'htop',
+      'mosh',
       'nodejs',
       'puppet-lint',
       'puppet',
