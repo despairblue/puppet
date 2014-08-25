@@ -38,9 +38,7 @@
 class tinc(
   $nodenumber = 'UNSET',
 ) {
-  package { 'tinc':
-    ensure => installed,
-  }
+  ensure_packages(['tinc'])
 
   service { 'tincd@home':
     ensure     => running,

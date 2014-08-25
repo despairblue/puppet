@@ -36,9 +36,7 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class ssh {
-  package { 'openssh':
-    ensure => installed,
-  }
+  ensure_packages(['openssh'])
 
   service { 'sshd':
     ensure  => running,

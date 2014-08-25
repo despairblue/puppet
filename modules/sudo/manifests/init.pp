@@ -36,7 +36,5 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class sudo {
-  package { 'sudo':
-    ensure => installed,
-  }
+  ensure_packages(['sudo'])
 }
