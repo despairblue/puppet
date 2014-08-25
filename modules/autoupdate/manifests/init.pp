@@ -38,6 +38,13 @@
 class autoupdate {
   include sudo
 
+  vcsrepo { '/home/papply/puppet':
+    ensure   => present,
+    provider => git,
+    source   => 'git@github.com:despairblue/puppet.git',
+    user     => 'papply',
+  }
+
   user { 'papply':
     ensure     => present,
     home       => '/home/papply',
