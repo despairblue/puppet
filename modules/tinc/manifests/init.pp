@@ -73,12 +73,13 @@ class tinc(
 # == Define: roottemplate
 #
 # TODO: write a definiton module
-define roottemplate2 ($path = $title, $mode = '0644') {
+define roottemplate2 ($path = $title, $mode = '0755') {
   file { $path:
     ensure  => file,
     content => template("tinc/${path}.erb"),
     mode    => $mode,
     group   => root,
     owner   => root,
+    notify  => Service['tincd@home'],
   }
 }
