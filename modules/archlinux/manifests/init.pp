@@ -64,6 +64,13 @@ class archlinux (
     key  => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDJhp2Yl0EbUfphhLTe09AlNJuTHNXbD22OMcMLg+9/5F5eIsX78t0S95lER8RC5O2djHSJKwXgu+rwfYU2BYSDyvSAcIrQ4zlX961BPNdOtWV/44ciq1rFCg2xGZs/0EVAz6mpRKrANI9RRqAZbyDzjZ9WYY8UQrjOHkKoHv0JnJUZy05AGsBHwClxPTQc0+Kr0NVTeScqJoolIKn1L0XeVT+AHlofqcI+luOTNoFZ87OjAhPwShz5uyjcJb4LYfKF25fAttnoBZBsW74EBOark7Zd5ZLAmeBva3iO2xzOMI6PBe+gDGM7fj90vF1zd3DsX+ekGY0n+aum/E+Wwewp',
   }
 
+  vcsrepo { "/home/${user}/vcs/git/puppet-module-skeleton":
+    ensure   => present,
+    provider => git,
+    source   => 'https://github.com/garethr/puppet-module-skeleton.git',
+    user     => $user,
+  }
+
   ensure_packages([
       'atom-editor',
       'byobu',
