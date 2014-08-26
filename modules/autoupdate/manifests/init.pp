@@ -36,7 +36,7 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class autoupdate {
-  include sudo
+  ensure_packages(['sudo', 'puppet', 'cronie'])
 
   vcsrepo { '/home/papply/puppet':
     ensure   => present,
