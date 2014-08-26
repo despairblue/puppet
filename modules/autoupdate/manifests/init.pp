@@ -64,26 +64,26 @@ class autoupdate {
   }
 
   file { '/usr/local/bin/papply':
-    ensure  => 'file',
-    source  => 'puppet:///modules/autoupdate/usr/local/bin/papply',
-    group   => '0',
-    mode    => '0755',
-    owner   => '0',
+    ensure => 'file',
+    source => 'puppet:///modules/autoupdate/usr/local/bin/papply',
+    group  => '0',
+    mode   => '0755',
+    owner  => '0',
   }
 
   file { '/usr/local/bin/pull-updates':
-    ensure  => 'file',
-    source  => 'puppet:///modules/autoupdate/usr/local/bin/pull-updates',
-    group   => '0',
-    mode    => '0755',
-    owner   => '0',
+    ensure => 'file',
+    source => 'puppet:///modules/autoupdate/usr/local/bin/pull-updates',
+    group  => '0',
+    mode   => '0755',
+    owner  => '0',
   }
 
   file { '/etc/sudoers.d/papply':
-    ensure  => 'file',
-    source  => 'puppet:///modules/autoupdate/etc/sudoers.d/papply',
-    group   => 'root',
-    mode    => '0644',
-    owner   => 'root',
+    ensure => 'file',
+    source => 'puppet:///modules/autoupdate/etc/sudoers.d/papply',
+    group  => 'root',
+    mode   => '0644',
+    owner  => 'root',
   }
 }
