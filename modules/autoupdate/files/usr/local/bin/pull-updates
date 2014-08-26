@@ -2,4 +2,4 @@
 
 PUPPETDIR=/home/papply/puppet
 cd ${PUPPETDIR}
-git pull && sudo /usr/local/bin/papply
+git pull && librarian-puppet install && sudo /usr/local/bin/papply
