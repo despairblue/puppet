@@ -1,5 +1,7 @@
 ---
 classes:
   - tinc
-tinc::nodenumber: 2
+tinc::ip_address: 10.0.0.102
+tinc::connect_to: [serenity]
+tinc::network_name: home
 ...
