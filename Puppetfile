@@ -26,4 +26,8 @@ forge "https://forgeapi.puppetlabs.com"
 
 mod 'puppetlabs/stdlib'
 mod 'puppetlabs/vcsrepo'
+mod 'puppetlabs/nodejs'
 # mod 'example42/tinc'
+
+mod 'kietsy/tinc',
+  :git => 'https://github.com/Kietsy/kietsy-tinc.git'
