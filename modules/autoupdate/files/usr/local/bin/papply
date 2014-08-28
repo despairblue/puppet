@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 PUPPETDIR=/home/papply/puppet
-puppet apply --modulepath=${PUPPETDIR}/modules ${PUPPETDIR}/manifests
+puppet apply --modulepath=${PUPPETDIR}/modules --hiera_config=${PUPPETDIR}/hiera.yaml ${PUPPETDIR}/manifests
