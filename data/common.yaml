@@ -9,7 +9,7 @@ archlinux::packages:
   - google-chrome
   - hipchat
   - htop
-  - logstash
+  # - logstash
   - mongodb
   - mosh
   - nodejs
