@@ -1,0 +1,21 @@
+---
+classes: [archlinux, ssh, autoupdate]
+archlinux::packages:
+  - atom-editor
+  - byobu
+  - docker
+  - git
+  - gitg
+  - google-chrome
+  - hipchat
+  - htop
+  - logstash
+  - mongodb
+  - mosh
+  - nodejs
+  - puppet
+  - puppet-lint
+  - supervisor
+  - trash-cli
+  - zsh
+...

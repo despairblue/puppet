@@ -7,6 +7,9 @@ file { '/tmp/puppet.lastrun':
   backup  => false,
 }
 
+hiera_include('classes')
+
+# Move to hiera somehow
 node 'baselinux' {
   case $::osfamily {
     'Archlinux': {
@@ -21,13 +24,7 @@ node 'baselinux' {
 }
 
 node 'serenity' inherits 'baselinux'{
-  class { 'tinc':
-    nodenumber => 1,
-  }
 }
 
 node 'firefly' inherits 'baselinux'{
-  class { 'tinc':
-    nodenumber => 2,
-  }
 }

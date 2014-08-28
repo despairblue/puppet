@@ -1,0 +1,10 @@
+---
+:backends:
+  - yaml
+:yaml:
+  :datadir: /home/despairblue/vcs/git/private-puppet/data
+  # :datadir: /home/papply/puppet/data
+:hierarchy:
+  - "node/%{::hostname}"
+  - common
+...

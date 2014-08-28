@@ -40,7 +40,8 @@ class archlinux (
   $trash_cli_package  = 'trash-cli',
   $supervisor_package = 'supervisor',
   $zsh_package        = 'zsh',
-  $puppet_service     = 'puppet'
+  $puppet_service     = 'puppet',
+  $packages           = [],
 ) {
   include ssh
 
@@ -71,24 +72,7 @@ class archlinux (
     user     => $user,
   }
 
-  ensure_packages([
-      'atom-editor',
-      'byobu',
-      'docker',
-      'git',
-      'gitg',
-      'google-chrome',
-      'hipchat',
-      'htop',
-      'mongodb',
-      'mosh',
-      'nodejs',
-      'puppet-lint',
-      'puppet',
-      $supervisor_package,
-      $trash_cli_package,
-      $zsh_package,
-  ])
+  ensure_packages(any2array($packages))
 
   ensure_packages([
     'librarian-puppet'

@@ -1,0 +1,5 @@
+---
+classes:
+  - tinc
+tinc::nodenumber: 2
+...
