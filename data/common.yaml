@@ -13,6 +13,7 @@ archlinux::packages:
   # - logstash
   - mongodb
   - mosh
+  - most
   - nodejs
   - puppet
   - puppet-lint
