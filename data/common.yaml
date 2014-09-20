@@ -13,6 +13,7 @@ archlinux::packages:
   # - logstash
   - lxappearance
   - mongodb
+  - mediterraneannight-theme
   - mosh
   - most
   - nodejs
