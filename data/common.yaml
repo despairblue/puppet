@@ -17,6 +17,7 @@ archlinux::packages:
   - nodejs
   - puppet
   - puppet-lint
+  - qsynergy
   - supervisor
   - trash-cli
   - zsh
