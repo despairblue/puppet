@@ -25,4 +25,5 @@ archlinux::packages:
   - the_silver_searcher
   - trash-cli
   - zsh
+  - nethogs
 ...
