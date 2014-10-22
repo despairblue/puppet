@@ -10,9 +10,9 @@ FORGE
     puppetlabs-vcsrepo (1.1.0)
 
 GIT
-  remote: https://github.com/Kietsy/kietsy-tinc.git
+  remote: https://github.com/kietsy/kietsy-tinc.git
   ref: master
-  sha: 2780f46ff07341e18e7d493dcb18b76dadc12dda
+  sha: 4d8cef88e0f359318bf46b35cea00f445306c5c6
   specs:
     kietsy-tinc (0.1.0)
 
