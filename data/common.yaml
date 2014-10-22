@@ -1,8 +1,9 @@
 ---
 classes: [archlinux, ssh, autoupdate]
 archlinux::packages:
-  # - atom-editor
+  - atom-editor
   - byobu
+  - deja-dup
   - docker
   - git
   - gitg
@@ -12,8 +13,8 @@ archlinux::packages:
   - kalu
   # - logstash
   - lxappearance
-  - mongodb
   - mediterraneannight-theme
+  - mongodb
   - mosh
   - most
   - nodejs
@@ -21,7 +22,7 @@ archlinux::packages:
   - puppet-lint
   - qsynergy
   - supervisor
+  - the_silver_searcher
   - trash-cli
   - zsh
-  - deja-dup
 ...
