@@ -23,4 +23,5 @@ archlinux::packages:
   - supervisor
   - trash-cli
   - zsh
+  - deja-dup
 ...
