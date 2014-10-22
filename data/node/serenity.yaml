@@ -2,6 +2,6 @@
 classes:
   - tinc
 tinc::ip_address: 10.0.0.101
-tinc::connect_to: [serenity]
+tinc::connect_to: [firefly]
 tinc::network_name: home
 ...
