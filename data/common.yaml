@@ -24,6 +24,8 @@ archlinux::packages:
   - supervisor
   - the_silver_searcher
   - trash-cli
+  - yubico-pam
+  - yubikey-personalization-gui
   - zsh
   - nethogs
 ...
