@@ -10,6 +10,7 @@ archlinux::packages:
   - google-chrome
   - hipchat
   - htop
+  - iw
   - kalu
   # - logstash
   - lxappearance
