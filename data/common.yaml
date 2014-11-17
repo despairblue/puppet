@@ -8,7 +8,6 @@ archlinux::packages:
   - git
   - gitg
   - google-chrome
-  - hipchat
   - htop
   - iw
   - kalu
