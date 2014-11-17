@@ -20,7 +20,7 @@ archlinux::packages:
   - nodejs
   - puppet
   - puppet-lint
-  - qsynergy
+  - synergy
   - supervisor
   - the_silver_searcher
   - trash-cli
