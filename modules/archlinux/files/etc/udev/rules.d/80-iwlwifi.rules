@@ -1,0 +1,1 @@
+ACTION=="add", SUBSYSTEM=="net", ATTR{address}=="9c:4e:36:9a:7f:bc", RUN+="/usr/bin/iw dev %k set power_save off"
