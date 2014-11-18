@@ -8,8 +8,8 @@ archlinux::packages:
   - git
   - gitg
   - google-chrome
-  - hipchat
   - htop
+  - iw
   - kalu
   # - logstash
   - lxappearance
@@ -20,10 +20,12 @@ archlinux::packages:
   - nodejs
   - puppet
   - puppet-lint
-  - qsynergy
+  - synergy
   - supervisor
   - the_silver_searcher
   - trash-cli
+  - yubico-pam
+  - yubikey-personalization-gui
   - zsh
   - nethogs
 ...
