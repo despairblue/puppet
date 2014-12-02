@@ -8,6 +8,7 @@ archlinux::packages:
   - git
   - gitg
   - google-chrome
+  - heroku-client-standalone
   - htop
   - iw
   - kalu
