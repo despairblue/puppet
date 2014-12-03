@@ -4,6 +4,7 @@ archlinux::packages:
   - atom-editor
   - byobu
   - deja-dup
+  - dnsmasq
   - docker
   - git
   - gitg
