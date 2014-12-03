@@ -88,6 +88,7 @@ class archlinux (
       '/etc/mkinitcpio.conf',
       '/etc/pacman.conf',
       '/etc/systemd/logind.conf',
+      '/etc/NetworkManager/NetworkManager.conf',
     ]:
   }
 
