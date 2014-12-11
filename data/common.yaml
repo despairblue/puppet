@@ -9,6 +9,7 @@ archlinux::packages:
   - git
   - gitg
   - google-chrome
+  - haveged
   - heroku-client-standalone
   - htop
   - iw
