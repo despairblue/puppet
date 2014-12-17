@@ -1,7 +1,7 @@
 ---
 classes: [archlinux, ssh, autoupdate]
 archlinux::packages:
-  - atom-editor
+  - atom-editor-bin
   - byobu
   - deja-dup
   - dnsmasq
