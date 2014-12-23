@@ -100,6 +100,7 @@ class archlinux (
     [
       '/etc/modprobe.d',
       '/etc/pam.d',
+      '/etc/sysctl.d',
     ]:
   }
 
