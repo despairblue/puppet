@@ -89,6 +89,7 @@ class archlinux (
       '/etc/pacman.conf',
       '/etc/systemd/logind.conf',
       '/etc/NetworkManager/NetworkManager.conf',
+      '/etc/lightdm/lightdm-gtk-greeter.conf',
     ]:
   }
 
@@ -101,7 +102,6 @@ class archlinux (
       '/etc/modprobe.d',
       '/etc/pam.d',
       '/etc/sysctl.d',
-      '/etc/lightdm',
     ]:
   }
 
