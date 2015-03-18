@@ -40,6 +40,7 @@ class archlinux (
   $trash_cli_package  = 'trash-cli',
   $supervisor_package = 'supervisor',
   $zsh_package        = 'zsh',
+  $fish_package       = 'fish',
   $puppet_service     = 'puppet',
   $packages           = [],
 ) {
@@ -49,8 +50,8 @@ class archlinux (
     ensure     => present,
     home       => "/home/${user}",
     managehome => true,
-    shell      => '/bin/zsh',
-    require    => Package[$zsh_package],
+    shell      => '/usr/bin/fish',
+    require    => Package[$fish_package],
   }
 
   ssh_authorized_key { 'despairblue@serenity':
