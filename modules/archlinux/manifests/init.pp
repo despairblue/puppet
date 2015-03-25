@@ -54,6 +54,10 @@ class archlinux (
     require    => Package[$fish_package],
   }
 
+  package { $fish_package:
+    ensure => present,
+  }
+
   ssh_authorized_key { 'despairblue@serenity':
     user => 'despairblue',
     type => 'rsa',
