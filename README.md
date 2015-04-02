@@ -3,6 +3,7 @@
 #### Table of Contents
 
 1. [Overview](#overview)
+2. [Things Done Manually](#manually)
 2. [Module Description - What the module does and why it is useful](#module-description)
 3. [Setup - The basics of getting started with default](#setup)
     * [What default affects](#what-default-affects)
@@ -18,6 +19,11 @@
 A one-maybe-two sentence summary of what the module does/what problem it solves.
 This is your 30 second elevator pitch for your module. Consider including
 OS/Puppet version it works with.
+
+## Manually
+* `sudo timedatectl set-ntp true`
+* `sudo systemctl enable pkgfile-update.timer; and sudo systemctl start pkgfile-update.timer`
+* `git clone https://github.com/sstephenson/rbenv.git ~/.rbenv`
 
 ## Module Description
 
