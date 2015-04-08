@@ -24,6 +24,8 @@ OS/Puppet version it works with.
 * `sudo timedatectl set-ntp true`
 * `sudo systemctl enable pkgfile-update.timer; and sudo systemctl start pkgfile-update.timer`
 * `git clone https://github.com/sstephenson/rbenv.git ~/.rbenv`
+* `gpg --recv-keys 1D1F0DC78F173680` to install powerpill
+* install powerpill
 
 ## Module Description
 
