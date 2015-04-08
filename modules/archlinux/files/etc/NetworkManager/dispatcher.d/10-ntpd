@@ -1,5 +1,10 @@
 #!/bin/bash
 
+############################################
+# this file is managed by puppet           #
+# changes to this file will be overwritten #
+############################################
+
 
 if [ -e /sys/fs/cgroup/systemd ]; then
         case "$2" in

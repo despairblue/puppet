@@ -4,6 +4,7 @@
 :yaml:
   # :datadir: /home/despairblue/vcs/git/private-puppet/data
   :datadir: /home/papply/puppet/data
+  # :datadir: /home/despairblue/vcs/git/puppet2/data
 :hierarchy:
   - "node/%{::hostname}"
   - common

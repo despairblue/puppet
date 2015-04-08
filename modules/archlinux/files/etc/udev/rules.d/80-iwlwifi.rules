@@ -1,1 +1,6 @@
+############################################
+# this file is managed by puppet           #
+# changes to this file will be overwritten #
+############################################
+
 ACTION=="add", SUBSYSTEM=="net", ATTR{address}=="9c:4e:36:9a:7f:bc", RUN+="/usr/bin/iw dev %k set power_save off"

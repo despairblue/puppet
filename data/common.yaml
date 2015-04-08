@@ -3,6 +3,7 @@ classes: [archlinux, ssh, autoupdate]
 archlinux::fish_package: fish-shell-git
 archlinux::packages:
   - atom-editor-bin
+  - aura-bin
   - byobu
   - deja-dup
   - dnsmasq

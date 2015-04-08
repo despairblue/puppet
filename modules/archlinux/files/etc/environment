@@ -1,6 +1,8 @@
-#
-# This file is managed by puppet.
-# Changes to this file will be overwritten.
+############################################
+# this file is managed by puppet           #
+# changes to this file will be overwritten #
+############################################
+
 #
 # This file is parsed by pam_env module
 #
