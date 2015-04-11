@@ -8,6 +8,7 @@ archlinux::packages:
   - deja-dup
   - dnsmasq
   - docker
+  - elementary-icon-theme
   - git
   - gitg
   - google-chrome
@@ -18,7 +19,6 @@ archlinux::packages:
   - kalu
   # - logstash
   - lxappearance
-  - mediterraneannight-theme
   - mongodb
   - mosh
   - most
@@ -30,6 +30,7 @@ archlinux::packages:
   - supervisor
   - the_silver_searcher
   - trash-cli
+  - vertex-themes-git
   - yubico-pam
   - yubikey-personalization-gui
   - zeal-git
