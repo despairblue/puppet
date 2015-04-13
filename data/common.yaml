@@ -17,17 +17,17 @@ archlinux::packages:
   - htop
   - iw
   - kalu
-  # - logstash
   - lxappearance
   - mongodb
   - mosh
   - most
+  - nethogs
   - nodejs
   - pkgfile
   - puppet
   - puppet-lint
-  - synergy
   - supervisor
+  - synergy
   - the_silver_searcher
   - trash-cli
   - vertex-themes-git
@@ -35,5 +35,4 @@ archlinux::packages:
   - yubikey-personalization-gui
   - zeal-git
   - zsh
-  - nethogs
 ...
