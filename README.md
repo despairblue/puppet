@@ -26,6 +26,13 @@ OS/Puppet version it works with.
 * `git clone https://github.com/sstephenson/rbenv.git ~/.rbenv`
 * `gpg --recv-keys 1D1F0DC78F173680` to install powerpill
 * install powerpill
+* autostart and supervise dropbox
+  * `systemctl --user edit dropbox`
+```
+  [Service]
+Environment=DISPLAY=:0
+```
+  * `systemctl --user enable dropbox`
 
 ## Module Description
 
