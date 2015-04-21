@@ -2,6 +2,7 @@
 classes: [archlinux, ssh, autoupdate]
 archlinux::fish_package: fish-shell-git
 archlinux::packages:
+  - adobe-source-code-pro-fonts
   - atom-editor-bin
   - aura-bin
   - byobu
@@ -17,23 +18,24 @@ archlinux::packages:
   - htop
   - iw
   - kalu
-  # - logstash
   - lxappearance
   - mongodb
   - mosh
   - most
+  - nethogs
   - nodejs
   - pkgfile
   - puppet
   - puppet-lint
-  - synergy
   - supervisor
+  - synergy
   - the_silver_searcher
   - trash-cli
+  - ttf-droid
+  - ttf-symbola
   - vertex-themes-git
   - yubico-pam
   - yubikey-personalization-gui
   - zeal-git
   - zsh
-  - nethogs
 ...
