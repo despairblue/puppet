@@ -116,6 +116,12 @@ class archlinux (
       '/etc/makepkg.conf',
     ]:
   }
+
+  sysctl { 'kernel.sysrq':
+    ensure => present,
+    value  => '1',
+  }
+
 }
 
 # == Define: rootfile
