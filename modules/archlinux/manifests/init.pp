@@ -80,7 +80,8 @@ class archlinux (
   ensure_packages(any2array($packages))
 
   ensure_packages([
-    'librarian-puppet'
+    'librarian-puppet',
+    'ruby-augeas',
   ], {
     provider => gem,
     require  => File['/etc/gemrc'],
@@ -117,11 +118,12 @@ class archlinux (
     ]:
   }
 
-  sysctl { 'kernel.sysrq':
-    ensure => present,
-    value  => '1',
+  augeas {'sysctl':
+    context => '/files/etc/sysctl.conf',
+    onlyif  => 'get sysrq != 1',
+    changes => 'set sysrq 1',
+    require => Package['ruby-augeas'],
   }
-
 }
 
 # == Define: rootfile
