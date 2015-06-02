@@ -10,7 +10,7 @@ file { '/tmp/puppet.lastrun':
 hiera_include('classes')
 
 # Move to hiera somehow
-node 'baselinux' {
+node 'serenity' {
   case $::osfamily {
     'Archlinux': {
       include archlinux
@@ -23,8 +23,15 @@ node 'baselinux' {
   }
 }
 
-node 'serenity' inherits 'baselinux'{
-}
-
-node 'firefly' inherits 'baselinux'{
+node 'firefly' {
+  case $::osfamily {
+    'Archlinux': {
+      include archlinux
+      include ssh
+      include autoupdate
+    }
+    default: {
+      fail("${::osfamily} not supported.")
+    }
+  }
 }
