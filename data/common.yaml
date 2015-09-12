@@ -24,6 +24,7 @@ archlinux::packages:
   - most
   - nethogs
   - nodejs
+  - papyros-shell
   - pkgfile
   - puppet
   - puppet-lint
