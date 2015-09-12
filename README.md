@@ -34,6 +34,7 @@ OS/Puppet version it works with.
 Environment=DISPLAY=:0
 ```
   * `systemctl --user enable dropbox`
+* `/etc/papersize` -> a4
 
 ## Module Description
 
