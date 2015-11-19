@@ -36,6 +36,6 @@ archlinux::packages:
   - vertex-themes-git
   - yubico-pam
   - yubikey-personalization-gui
-  - zeal-git
+  - zeal
   - zsh
 ...
